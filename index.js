@@ -218,8 +218,8 @@ console.log('Task 1.2', artists[2].bio);
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 (not auto tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
-artists[8].name = 'Vincent Van Gogh'
-console.log('Task 2:', artists[8].name);
+// artists[8].name = 'Vincent Van Gogh'
+// console.log('Task 2:', artists[8].name);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
@@ -303,10 +303,16 @@ Use lotsOfArt to do the following:
 🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]
 */
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(array) {
+  const lotsOfArtArray = []
+  for (let i = 0; i < array.length; i++){
+    if (array[i].paintings > 100){
+      lotsOfArtArray.push(artists[i].name);
+    }
+  }
+  return lotsOfArtArray
 }
-
+console.log('Task 7:',lotsOfArt(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
