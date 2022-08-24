@@ -344,8 +344,14 @@ Use artistByCountry to do the following:
 🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(/*Your Code Here*/){
-  /*Your Code Here*/
+function artistByCountry(array, nationality){
+  const nationalityArray = []
+  for (let i = 0; i < array.length; i++){
+    if (artists[i].nationality === nationality){
+      nationalityArray.push(array[i].name);
+    }
+  }
+  return nationalityArray
 }
 
 
