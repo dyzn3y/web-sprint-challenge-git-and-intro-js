@@ -246,10 +246,13 @@ Use listOfNames to do the following:
 */
 
 function listOfNames(array){
-  //const artistNames = [];
+  const artistNames = [];
+  for (let i = 0; i < array.length; i++){
+    artistNames.push(artists[i].name);
+  }
     //get names
    //push names
-   // return artistNames
+    return artistNames
 }
 
 listOfNames(artists);
